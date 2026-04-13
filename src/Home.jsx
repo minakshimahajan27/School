@@ -163,7 +163,7 @@ import aboutImg1 from './assets/about1.jpeg'
 import img1 from './assets/choose1.jpeg';
 import img2 from './assets/choose2.jpeg';
 import img3 from './assets/choose3.jpeg';
-import  Library from './assets/Library.jpeg'
+import Library from './assets/Library.jpeg'
 
 const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -218,7 +218,7 @@ const Home = () => {
         </Container>
       </div>
 
-     
+
       {/* 2. ABOUT US SECTION (Replaced Who We Are) */}
       <div className="py-5 bg-white">
         <Container>
@@ -287,7 +287,7 @@ const Home = () => {
           <Row>
             {[
               { title: 'Smart Classes', text: 'Technology integrated learning methods.', img: img1 },
-              { title: 'Sports & Arts', text: 'Focus on extra-curricular activities.', img: img2},
+              { title: 'Sports & Arts', text: 'Focus on extra-curricular activities.', img: img2 },
               { title: 'Secure Campus', text: '24/7 surveillance and safe environment.', img: img3 },
             ].map((feature, index) => (
               <Col md={4} key={index} className="mb-4" data-aos={feature.animation}>
@@ -333,7 +333,7 @@ const Home = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} data-aos="slide-right">
-              <img src={ Library} alt="Library" className="img-fluid rounded-4 shadow-lg" />
+              <img src={Library} alt="Library" className="img-fluid rounded-4 shadow-lg" />
             </Col>
             <Col lg={6} className="text-light p-5" data-aos="slide-left">
               <h2 className="fw-bold mb-4" style={{ color: '#ffc107' }}>World-Class Library</h2>
@@ -377,7 +377,22 @@ const Home = () => {
         .feature-card:hover, .wing-card:hover { transform: translateY(-15px); box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important; }
         .feature-card img { transition: transform 0.5s ease; }
         .feature-card:hover img { transform: scale(1.1); }
-        .wing-card:hover { background-color: #002b5b; color: white !important; }
+        /* Purana wing-card hover hata kar ye wala likhein */
+.wing-card {
+  transition: all 0.4s ease;
+  border-bottom: 5px solid #ffc107 !important;
+}
+
+.wing-card:hover {
+  background-color: #002b5b !important;
+  transform: translateY(-12px);
+}
+
+/* Jab card hover ho, toh uske andar ke h4 aur p ka color white ho jaye */
+.wing-card:hover h4, 
+.wing-card:hover p {
+  color: white !important;
+}
         .form-control { padding: 12px; border-radius: 10px; }
       `}</style>
     </div>
