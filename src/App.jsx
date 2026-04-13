@@ -10,6 +10,7 @@ import Academic from './Academic ';
 import Contact from './Contact';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import Admission from './Admission';
 function App() {
   return (
     <Router>
@@ -21,7 +22,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/academics" element={<Academic />} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/admission" element={<h1 className="text-center mt-5">Admission Form</h1>} />
+        <Route path="/admission" element={<Admission/>} />
       </Routes>
       <Footer/>
     </Router>
