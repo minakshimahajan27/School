@@ -64,7 +64,7 @@ const Admission = () => {
                       <Col md={6} className="mb-3">
                         <Form.Group>
                           <Form.Label className="small fw-bold text-muted">Student Full Name</Form.Label>
-                          <Form.Control type="text" placeholder="Bache ka naam" required 
+                          <Form.Control type="text" placeholder="Student Name" required 
                             onChange={(e) => setFormData({...formData, studentName: e.target.value})} />
                         </Form.Group>
                       </Col>
@@ -107,7 +107,7 @@ const Admission = () => {
                       <Col md={6} className="mb-3">
                         <Form.Group>
                           <Form.Label className="small fw-bold text-muted">Parent/Guardian Name</Form.Label>
-                          <Form.Control type="text" placeholder="Parent ka naam" required 
+                          <Form.Control type="text" placeholder="Parent Name" required 
                             onChange={(e) => setFormData({...formData, parentName: e.target.value})} />
                         </Form.Group>
                       </Col>
